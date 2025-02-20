@@ -31,7 +31,6 @@
             border-radius: 50%;
             background: darkgray;
         }
-
     }
     #tone-arm {
         height: 7rem;
@@ -149,4 +148,24 @@
         left: 0;
         background: seagreen;
     }
+}
+
+/* Text animation */
+#text-container {
+    position: relative;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+#text-animation {
+    position: relative;
+    font-size: 1.5rem;
+    top: calc(50% - 0.75rem);
+    transition: transform 1s, color 1s linear 1s, text-shadow 1s linear 1s;
+}
+#text-animation:hover, #text-animation:active {
+    transform: scale(1.2, 1.2);
+    color: hotpink;
+    text-shadow: 2px 2px black;
+    text-decoration: underline;
 }
