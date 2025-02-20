@@ -70,7 +70,7 @@
         transform: rotate(0deg);
     }
     100% {
-        transform:rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 @keyframes move-arm {
@@ -81,9 +81,72 @@
         transform: rotate(30deg);
     }
     90% {
-        transform:rotate(55deg);
+        transform: rotate(55deg);
     }
     100% {
         transform: rotate(0deg);
+    }
+}
+
+/* Ball animation */
+#ball-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: black;
+    #ball {
+        position: absolute;
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+        animation: bounce-ball 5s linear infinite;
+        transition: background 0.625s linear;
+    }
+}
+@keyframes bounce-ball {
+    0% {
+        top: 0;
+        left: 0;
+        background: seagreen;
+    }
+    12.5% {
+        top: calc(100% - 2rem);
+        left: calc(25% - 0.5rem);
+        background: indigo;
+    }
+    25% {
+        top: 0;
+        left: calc(50% - 1rem);
+        background: red;
+    }
+    37.5% {
+        top: calc(100% - 2rem);
+        left: calc(75% - 1.5rem);
+        background: darkgoldenrod;
+    }
+    50% {
+        top: 0;
+        left: calc(100% - 2rem);
+        background: seagreen;
+    }
+    62.5% {
+        top: calc(100% - 2rem);
+        left: calc(75% - 1.5rem);
+        background: indigo;
+    }
+    75% {
+        top: 0;
+        left: calc(50% - 1rem);
+        background: red;
+    }
+    87.5% {
+        top: calc(100% - 2rem);
+        left: calc(25% - 0.5rem);
+        background: darkgoldenrod;
+    }
+    100% {
+        top: 0;
+        left: 0;
+        background: seagreen;
     }
 }
