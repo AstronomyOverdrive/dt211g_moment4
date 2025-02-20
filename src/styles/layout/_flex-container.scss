@@ -7,10 +7,12 @@
     justify-content: space-around; /* Evenly space divs */
 }
 .flex-container {
-    div {
+    .item-container, .animation-container {
         @extend .rounded-corners;
         margin: 1rem;
         padding: 1rem;
+    }
+    .item-container {
         h3 {
             margin-top: 0.2rem;
             margin-bottom: 0.2rem;
@@ -26,7 +28,7 @@
     .flex-container {
         width: 70%;
         margin-left: 15%;
-        div {
+        .item-container, .animation-container {
             width: 30%;
         }
     }
@@ -35,7 +37,7 @@
     .flex-container {
         width: 90%;
         margin-left: 5%;
-        div {
+        .item-container, .animation-container {
             width: 45%;
         }
     }
@@ -44,7 +46,7 @@
     .flex-container {
         width: 100%;
         margin-left: 0;
-        div {
+        .item-container, .animation-container {
             width: 90%;
         }
     }

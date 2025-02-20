@@ -1,0 +1,72 @@
+/* Record player animation */
+#record-player {
+    position: relative;
+    width: 12rem;
+    height: 9rem;
+    border-radius: 1rem;
+    background: gray;
+    left: 50%;
+    transform: translate(-50%, 0);
+    div {
+        position: absolute;
+    }
+    #vinyl-record {
+        top: 0.5rem;
+        left: 0.5rem;
+        width: 8rem;
+        height: 8rem;
+        border-radius: 50%;
+        background: black;
+        animation: spin-record 2s linear; /* Move to separate class */
+        animation-iteration-count: 5; /* Move to separate class */
+        #vinyl-reflection {
+            width: 4rem;
+            height: 4rem;
+            background: linear-gradient(45deg, black 0%, black 50%, lightgray 50%, lightgray 100%);
+            border-radius: 100% 0% 0% 0%;
+        }
+        #vinyl-label {
+            width: 2rem;
+            height: 2rem;
+            left: 3rem;
+            top: 3rem;
+            border-radius: 50%;
+            background: darkgray;
+        }
+    }
+    #tone-arm {
+        height: 7rem;
+        width: 0.5rem;
+        top: 0.5rem;
+        right: 0.5rem;
+        transform-origin: top;
+        background: linear-gradient(white 0%, white 90%, deepskyblue 90%, deepskyblue 100%);
+        border-radius: 1rem 1rem 1rem 1rem;
+        animation: move-arm 10s linear; /* Move to separate class */
+    }
+}
+#animation-btn {
+    margin-top: 1rem;
+}
+@keyframes spin-record {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform:rotate(360deg);
+    }
+}
+@keyframes move-arm {
+    0% {
+        transform: rotate(0deg);
+    }
+    5% {
+        transform: rotate(30deg);
+    }
+    90% {
+        transform:rotate(55deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}

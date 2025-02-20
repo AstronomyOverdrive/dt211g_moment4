@@ -80,7 +80,7 @@ footer {
             outline: 1px solid lighten($dark-base-colour, 50%);
         }
         .flex-container {
-            div {
+            .item-container, .animation-container {
                 border: 1px solid $accent-colour;
                 background: darken($accent-colour, 20%);
             }
@@ -95,7 +95,7 @@ footer {
             outline: 1px solid $dark-text-colour;;
         }
         .flex-container {
-            div {
+            .item-container, .animation-container {
                 border: 1px solid darken($accent-colour, 20%);
                 background: $accent-colour;
             }
