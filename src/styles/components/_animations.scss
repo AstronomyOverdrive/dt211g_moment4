@@ -17,8 +17,6 @@
         height: 8rem;
         border-radius: 50%;
         background: black;
-        animation: spin-record 2s linear; /* Move to separate class */
-        animation-iteration-count: 5; /* Move to separate class */
         #vinyl-reflection {
             width: 4rem;
             height: 4rem;
@@ -33,6 +31,7 @@
             border-radius: 50%;
             background: darkgray;
         }
+
     }
     #tone-arm {
         height: 7rem;
@@ -42,11 +41,29 @@
         transform-origin: top;
         background: linear-gradient(white 0%, white 90%, deepskyblue 90%, deepskyblue 100%);
         border-radius: 1rem 1rem 1rem 1rem;
-        animation: move-arm 10s linear; /* Move to separate class */
     }
+}
+.play-animation1 {
+    animation: spin-record 2s linear;
+    animation-iteration-count: 5;
+}
+.play-animation2 {
+    animation: move-arm 10s linear;
 }
 #animation-btn {
     margin-top: 1rem;
+    #progress-bar {
+        position: relative;
+        width: 0%;
+        display: block;
+        border-bottom: 2px solid cyan;
+    }
+}
+#animation-btn:disabled {
+    #progress-bar {
+        transition: 10s linear;
+        width: 100%;
+    }
 }
 @keyframes spin-record {
     0% {
